@@ -10,7 +10,7 @@ from airflow.hooks.S3_hook import S3Hook
 
 class GoogleApiToS3Transfer(BaseOperator):
     """
-    Basic class for transferring data from an Google APIs endpoint into a S3 Bucket.
+    Basic class for transferring data from a Google API endpoint into a S3 Bucket.
 
     :param google_api_service_name: The specific API service that is being requested.
     :type google_api_service_name: str

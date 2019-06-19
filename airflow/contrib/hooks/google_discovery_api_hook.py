@@ -24,13 +24,19 @@ from airflow.contrib.hooks.gcp_api_base_hook import GoogleCloudBaseHook
 
 class GoogleDiscoveryApiHook(GoogleCloudBaseHook):
     """
-    A hook to use the Google API Client library.
+    A hook to use the Google API Discovery Service.
 
     :param api_service_name: The name of the api service that is needed to get the data
         for example 'youtube'.
     :type api_service_name: str
     :param api_version: The version of the api that will be requested for example 'v3'.
     :type api_version: str
+    :param gcp_conn_id: The connection ID to use when fetching connection info.
+    :type gcp_conn_id: str
+    :param delegate_to: The account to impersonate, if any.
+        For this to work, the service account making the request must have
+        domain-wide delegation enabled.
+    :type delegate_to: str
     """
     _conn = None
 
